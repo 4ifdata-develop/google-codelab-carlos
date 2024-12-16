@@ -1,3 +1,4 @@
+import 'package:codelab_training/codelabs/lab_eight/motion_router/motion_router.dart';
 import 'package:flutter/material.dart';
 
 class SearchPageEight extends StatefulWidget {
@@ -10,6 +11,17 @@ class SearchPageEight extends StatefulWidget {
 class _SearchPageEightState extends State<SearchPageEight> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Search'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => motionRouter.pop(),
+        ),
+      ),
+      body: const Center(
+        child: Text('Página de búsqueda'),
+      ),
+    );
   }
 }
